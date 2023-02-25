@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>hexo教程-Quiet</title>
+<title>markdown语法介绍-Quiet</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -11,8 +11,9 @@
 <link rel="stylesheet" href="/css/index.css">
 
 
-<meta name="keywords" content="hexo主题,hexo扁平化主题,Quiet主题">
-<meta name="description" content="描述">
+
+<meta name="keywords" content="markdown,语法,">
+<meta name="description" content="">
 
 
 <script src="/js/jquery.min.js"></script>
@@ -114,7 +115,7 @@
 	</div>
 	<div class="sidebar">
     <div class="topo">
-        <h2>Joey</h2>
+        <h2>染小希</h2>
     </div>
     <ul>
         
@@ -282,9 +283,15 @@
     <div class="post-header-background-content">
         <ul class="post-header-tag">
             
+            
+            <li><a href="/tags/markdown">markdown</a></li>
+            
+            <li><a href="/tags/语法">语法</a></li>
+            
+            
         </ul>
         
-        <h1>hexo教程</h1>
+        <h1>markdown语法介绍</h1>
         <div class="post-header-info">
             <div class="post-header-info-author">
                 
@@ -295,11 +302,11 @@
                             p-id="2902" fill="#ffffff"></path>
                     </svg>
                     
-                <span class="post-header-info-author-text"> <a href="../../about">Joey</a></span>
+                <span class="post-header-info-author-text"> <a href="../../about">染小希</a></span>
                 <div class="post-header-info-author-categories">
                     
                 </div>
-                <p>2023-02-21 08:51:37</p>
+                <p>2023-02-21 10:39:13</p>
             </div>
         </div>
     </div>
@@ -309,7 +316,266 @@
   <div id="article" class="post-content-info">
     
 
-    
+    <h4 id="一、markdown常用语法："><a href="#一、markdown常用语法：" class="headerlink" title="一、markdown常用语法："></a>一、markdown常用语法：</h4><ol>
+<li><h5 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h5><p>使用#号标记，可以表示1-6级标题，随着#个数的递增，标题依次递减。如下实例：</p>
+<pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题
+</code></pre>
+<p>如图所示：</p>
+<p><img src="/../../image/title/md_title_2023-02-25_18-33-24.png" alt="标题示图"></p>
+</li>
+<li><h5 id="换行："><a href="#换行：" class="headerlink" title="换行："></a>换行：</h5><p>markdown换行方式有多种：</p>
+<ul>
+<li><p>直接在一句话后面敲两个空格</p>
+</li>
+<li><p>两句话之间加一个空行</p>
+</li>
+<li><p>如果你在编辑的时候，想让一行文字分成几段在显示的时候换行，就在中间加</p>
+</li>
+</ul>
+<pre><code>&lt;br&gt;
+</code></pre>
+</li>
+<li><h5 id="首行缩进："><a href="#首行缩进：" class="headerlink" title="首行缩进："></a>首行缩进：</h5><p>markdown的首行缩进方式：</p>
+<ul>
+<li>可以利用HTML特殊转义字符<table>
+<thead>
+<tr>
+<th align="center">显示</th>
+<th align="center">说明</th>
+<th align="center">实体名称</th>
+<th align="center">实体编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">测试</td>
+<td align="center">半角空格</td>
+<td align="center">&amp;ensp;</td>
+<td align="center">&amp;#8194;</td>
+</tr>
+<tr>
+<td align="center">测试</td>
+<td align="center">全角空格</td>
+<td align="center">&amp;emsp;</td>
+<td align="center">&amp;#8195;</td>
+</tr>
+<tr>
+<td align="center">测试</td>
+<td align="center">不断行空格</td>
+<td align="center">&amp;nbsp;</td>
+<td align="center">&amp;#160;</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>我使用hexo部署到GitHub，运行起来没有实质的效果，目前是不支持的。</p>
+<ul>
+<li>可以使用标签中的style中添加text-indent:2em，也可以实现首行缩进功能</li>
+</ul>
+<pre><code>&lt;p style=&quot;text-indent:2em&quot;&gt;这样也可以实现首行缩进功能
+</code></pre>
+<ol>
+<li><p>字体大小、颜色、类型、加粗、倾斜：</p>
+<ul>
+<li>字体大小：</li>
+</ul>
+<pre><code>&lt;font size=5&gt; Hello
+</code></pre>
+<p><font size=1> Hello</p>
+<ul>
+<li>字体颜色：</li>
+</ul>
+<pre><code>&lt;font color=red&gt;color
+</code></pre>
+<p><font size = 5 color=red>color</p>
+<ul>
+<li>字体类型：</li>
+</ul>
+<pre><code>&lt;font face=“微软雅黑”&gt;微软雅黑
+</code></pre>
+<p><font face="微软雅黑">微软雅黑</p>
+<ul>
+<li>字体加粗：</li>
+</ul>
+<pre><code>**内容**  [*与内容之间没有空格]
+</code></pre>
+<p><strong>内容</strong> <strong>你看我粗不粗</strong></p>
+<ul>
+<li>字体倾斜：</li>
+</ul>
+<pre><code>*内容*   [*与内容没有空格]
+</code></pre>
+<p><em>内容</em> <em>你看我斜不斜</em></p>
+<ul>
+<li><p>删除线：</p>
+<p><del>这是我要删除的内容</del></p>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code>~~这是我要删除的内容~~
+</code></pre>
+</li>
+<li><h5 id="数组："><a href="#数组：" class="headerlink" title="数组："></a>数组：</h5><p>数组表示方式:</p>
+<ul>
+<li>第一种表达方式：</li>
+</ul>
+<pre><code>[数组一,数组二,数组三,.....,数组n]
+</code></pre>
+<ul>
+<li>第二种表达方式：</li>
+</ul>
+<pre><code>数组：
+    - 数组1
+    - 数组2
+    - 数组3
+</code></pre>
+</li>
+<li><h5 id="列表："><a href="#列表：" class="headerlink" title="列表："></a>列表：</h5><ul>
+<li><p>无序列表</p>
+<p>使用无序列表用-,+或*，第二层相比第一层至少缩进两个空格。</p>
+<ul>
+<li>一层<ul>
+<li>两层<ul>
+<li>三层</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- 一层
++ 两层
+* 三层
+</code></pre>
+<ul>
+<li><p>有序列表</p>
+<p>使用1.（点号后面有空格）表示有序列表，可嵌套。</p>
+<ol>
+<li>有序1<ol>
+<li>有序2</li>
+<li>有序3</li>
+<li>有序4</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<pre><code>1. 
+1. 
+1. 
+</code></pre>
+</li>
+<li><h5 id="引用："><a href="#引用：" class="headerlink" title="引用："></a>引用：</h5><blockquote>
+<p>这是一级引用的用法</p>
+<blockquote>
+<p> 这是二级引用的用法</p>
+<blockquote>
+<p>这是三级引用的用法</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<pre><code>引用的语法：
+一级：&gt; 空格
+二级：&gt; 空格 &gt;空格
+三级：&gt; 空格 &gt;空格 &gt;空格
+</code></pre>
+</li>
+<li><h5 id="代码块："><a href="#代码块：" class="headerlink" title="代码块："></a>代码块：</h5><pre><code>(```)
+String a = &quot;hello world&quot;;
+System.out.println(a);
+(```)
+</code></pre>
+<p style = "text-indent:2em">注意！！！ 为了防止转义，前后三个反引号处加了小括号，实际使用时是没有小括号的。
+</li>
+<li><h5 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h5><pre><code>![图片名称](图片地址) &amp;&amp;注意：[]与()之间是没有空格的
+示例：
+![图片](../image/picture.png)
+</code></pre>
+</li>
+<li><h5 id="超链接："><a href="#超链接：" class="headerlink" title="超链接："></a>超链接：</h5><p><a target="_blank" rel="noopener" href="http://www.baidu.com/">百度：你点击一下试试</a>   </p>
+<pre><code>[超链接名称](http://www.baidu.com) &amp;&amp;注意：[]与()之间是没有空格的
+示例：
+[百度](http://www.baidu.com)
+</code></pre>
+</li>
+<li><h5 id="下划线："><a href="#下划线：" class="headerlink" title="下划线："></a>下划线：</h5><pre><code>&lt;u&gt;这是下划线的例子&lt;u&gt;
+</code></pre>
+</li>
+<li><h5 id="分割线："><a href="#分割线：" class="headerlink" title="分割线："></a>分割线：</h5><p>三个或者三个以上的-或者*都可以</p>
+<pre><code>-----
+</code></pre>
+<hr>
+<pre><code>*****
+</code></pre>
+<hr>
+</li>
+<li><h5 id="待办事项："><a href="#待办事项：" class="headerlink" title="待办事项："></a>待办事项：</h5><ul>
+<li><input checked="" disabled="" type="checkbox"> 已完成1<ul>
+<li><input checked="" disabled="" type="checkbox"> 已完成2</li>
+<li><input disabled="" type="checkbox"> 未完成1</li>
+<li><input disabled="" type="checkbox"> 未完成2</li>
+</ul>
+</li>
+</ul>
+<pre><code>- [x]:表示有对勾
+- [ ]:表示无对勾
+</code></pre>
+</li>
+<li><h5 id="脚注："><a href="#脚注：" class="headerlink" title="脚注："></a>脚注：</h5><p>使用[^]来定义脚注：</p>
+<pre><code>示例：
+这是一个脚注的例子[^1]:http://www.baidu.com
+[^1]:这里是注脚
+</code></pre>
+<p>这是一个脚注的例子<a target="_blank" rel="noopener" href="http://www.baidu.com/">^1</a></p>
+</li>
+</ol>
+<h4 id="二、-markdown支持HTML元素："><a href="#二、-markdown支持HTML元素：" class="headerlink" title="二、 markdown支持HTML元素："></a>二、 markdown支持HTML元素：</h4><ol>
+<li><h5 id="元素标签："><a href="#元素标签：" class="headerlink" title="元素标签："></a>元素标签：</h5><p>目前支持的HTML元素标签有：等，如：</p>
+<p>使用<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del+</kbd>重启电脑</p>
+<pre><code>使用&lt;kdb&gt;Ctrl+&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt;重启电脑
+</code></pre>
+</li>
+<li><h5 id="页面内跳转："><a href="#页面内跳转：" class="headerlink" title="页面内跳转："></a>页面内跳转：</h5><p>可用于生成目录。h5指的是锚点格式为五级标题</p>
+<h5 id = "anchor">
+    我是一个锚点
+</h5></li>
+</ol>
+<pre><code>&lt;h5 id = &quot;anchor&quot;&gt;我是一个锚点&lt;/h5&gt;
+</code></pre>
+<ol>
+<li><p>音频：</p>
+<pre><code>&lt;div class=&quot;music&quot;&gt;
+&lt;iframe src=&quot;地址&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="music">
+<iframe src="https://music.163.com/#/playlist?id=1989897584" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+</li>
+<li><p>视频：</p>
+<pre><code>&lt;div class=&quot;video&quot;&gt;
+&lt;iframe src=&quot;地址&quot; scrolling=&quot;no&quot; border=&quot;0&quot; frameborder=&quot;no&quot; framespacing=&quot;0&quot; allowfullscreen=&quot;true&quot;&gt; &lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
+</li>
+<li><p>代码折叠：</p>
+<pre><code>&lt;details&gt;
+&lt;summary&gt;摘要&lt;/summary&gt;
+&lt;pre&gt;
+&lt;code class=&quot;language-cpp hljs&quot;&gt;代码
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;/details&gt;
+</code></pre>
+</li>
+</ol>
+
   </div>
   <div id="gitalk-container"></div>
 </div>
@@ -369,19 +635,12 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 
     <div class="post-paging">
     
-    <a href="/2023/02/21/test/">
-        <div class="post-paging-last">
-            <span>上一篇</span>
-            <p>李曉明真帥</p>
-        </div>
-    </a>
-    
 
     
-    <a href="/2023/02/20/hello-world/">
+    <a href="/2023/02/21/mylife/pseudonym/">
         <div class="post-paging-next">
             <span>下一篇</span>
-            <p>Hello World</p>
+            <p>笔名的由来</p>
         </div>
     </a>
     
@@ -390,7 +649,7 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 		
 <div class="footer">
 	<div class="Copyright">
-		©2023 By Joey. 主题：<a
+		©2023 By 染小希. 主题：<a
 			style="text-decoration: none;display: contents; color: #898F9F;"
 			target="_blank" rel="noopener" href="https://github.com/79e/hexo-theme-quiet">Quiet</a>
 	</div>
